@@ -1,0 +1,16 @@
+# Knative Eventing Trigger to trigger the crawler service
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: crawler
+  namespace: crawler-system
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: io.podgateway.client.pending
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: crawler-provisioner

@@ -1,0 +1,8 @@
+# crawler-namespace.yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: crawler-system
+  labels:
+    routed-gateway: "true"

@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- crawler-namespace.yaml
+- cloudevents-logger.yaml
+- cloudevents-player.yaml
+- provisioner-rbac.yaml
+- provisioner-knative-broker.yaml
+- provisioner-knative-service.yaml
+- provisioner-knative-trigger.yaml
+# https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/
+# https://knative.dev/docs/install/yaml-install/eventing/install-eventing-with-yaml/
