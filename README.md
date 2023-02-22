@@ -52,6 +52,12 @@ Requirements:
 
 ### Deploy the stack locally on [KinD](https://kind.sigs.k8s.io)
 
+> Please review the subnet blocks in the pod-gateway Helm chart values:
+> - `settings.NOT_ROUTED_TO_GATEWAY_CIDRS`
+> - `settings.VPN_LOCAL_CIDRS`
+> 
+> in [`deploy/pod-gateway-foo-values.yaml`](./deploy/pod-gateway-foo-values.yaml) and [`deploy/pod-gateway-bar-values.yaml`](./deploy/pod-gateway-bar-values.yaml).
+
 ```shell
 make deploy
 ```
